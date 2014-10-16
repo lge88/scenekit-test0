@@ -15,5 +15,6 @@
 - (BOOL) isDataSetActive:(NSString*) name;
 - (BOOL) activateDataSetByName:(NSString*) name;
 - (BOOL) deactivateDataSetByName:(NSString*) name;
+- (NSString*) getActiveDataSet;
 - (NSArray*) getDateSetNameList;
 @end

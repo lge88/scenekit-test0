@@ -7,9 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ARDataSetManager.h"
+#import "ARState.h"
+#import "ARServer.h"
+
+@class ARServer;
 
 @interface ARContext : NSObject
 
-- (void) sayHello;
+- (id) initWithServer:(ARServer*) server;
+- (ARDataSetManager*) getDataSetManager;
+- (ARState*) getARState;
+
+- (BOOL) startAR;
+- (ARMatrix44F) getProjectionMatrix;
 
 @end

@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CGGeometry.h>
 #import "ARContext.h"
+
+@class ARContext;
 
 @interface ARServer : NSObject
 
-- (id) initWithDone:(void (^)(ARContext*)) done;
-- (id) initWithDone:(void (^)(ARContext*)) done Fail:(void (^)()) fail;
+- (id) initWithSize:(CGSize) size Done:(void (^)(ARContext*)) done;
+
+// TODO: pass error code to fail() block
+- (id) initWithSize:(CGSize) size Done:(void (^)(ARContext*)) done Fail:(void (^)()) fail;
+
+- (BOOL) isRetinaDisplay;
+- (ARMatrix44F) getProjectionMatrix;
+- (NSError*) startAR;
 
 @end

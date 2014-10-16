@@ -8,10 +8,45 @@
 
 #import "ARContext.h"
 
-@implementation ARContext
+#define APPLICATION_ERROR_DOMAIN @"scenekit-test0.vision2.ucsd.edu"
 
-- (void) sayHello {
-    NSLog(@"Hello");
+@implementation ARContext {
+    ARDataSetManager* mDataSetManager;
+    ARState* mARState;
+    ARServer* mARServer;
+}
+
+- (id) initWithServer:(ARServer *)server {
+    self = [super init];
+    if (self) {
+        if (!server) return nil;
+        
+        mDataSetManager = [[ARDataSetManager alloc] init];
+        mARState = [[ARState alloc] init];
+        mARServer = server;
+    }
+    return self;
+}
+
+- (ARDataSetManager*) getDataSetManager {
+    return mDataSetManager;
+}
+
+- (ARState*) getARState {
+    return mARState;
+}
+
+- (BOOL) startAR {
+    NSError* error = [mARServer startAR];
+    if (error) {
+        NSLog(@"%@",[error localizedDescription]);
+        return NO;
+    }
+    return YES;
+}
+
+- (ARMatrix44F) getProjectionMatrix {
+    return [mARServer getProjectionMatrix];
 }
 
 @end

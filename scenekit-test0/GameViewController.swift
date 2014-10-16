@@ -15,16 +15,23 @@ class GameViewController: UIViewController {
     // interesting: tag = 0 won't work..
     let SCNVIEW_TAG = 1000
     let VIDEOVIEW_TAG = 2000
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let ar = ARServer(done: {
-            (ctx) in
-            ctx.sayHello()
-        })
+    
+    var arContext:ARContext? = nil
+    
+    func initARCallback(ctx: ARContext!) {
+        let ok = ctx.startAR()
+        let mat = ctx.getProjectionMatrix()
+        
+        println(mat.data)
+        
         initViews()
         animateScene()
         initControls()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ARServer(size:self.view.frame.size, done: initARCallback)
     }
     
     func initViews() {

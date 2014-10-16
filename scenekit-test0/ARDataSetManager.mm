@@ -33,7 +33,10 @@ QCAR::ImageTracker* getImageTracker() {
 }
 
 - (id) init {
-    dataSetByName = [[NSMutableDictionary alloc] init];
+    self = [super init];
+    if (self) {
+        dataSetByName = [[NSMutableDictionary alloc] init];
+    }
     return self;
 }
 
@@ -141,6 +144,17 @@ QCAR::ImageTracker* getImageTracker() {
 - (NSArray*) getDateSetNameList {
     return [dataSetByName allKeys];
 }
+
+- (NSString*) getActiveDataSet {
+    NSArray* allDataSets = [self getDateSetNameList];
+    for (NSString* dataSetName in allDataSets) {
+        if ([self isDataSetActive:dataSetName]) {
+            return dataSetName;
+        }
+    }
+    return nil;
+}
+
 
 
 @end

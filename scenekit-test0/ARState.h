@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ARMatrix.h"
 
+@interface ARTarget : NSObject
+
+- (BOOL) isTracked;
+- (ARMatrix44F) getModelViewMatrix;
+- (NSString*) getName;
+
+@end
 
 @interface ARState : NSObject
 
-
+// A list of ARTarget objects
+- (NSArray*) getTrackedTargets;
 
 @end

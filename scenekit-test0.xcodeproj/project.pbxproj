@@ -27,9 +27,9 @@
 		10A5A4E119EEF48B0080F108 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4E019EEF48B0080F108 /* Foundation.framework */; };
 		10A5A4E319EEF49A0080F108 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4E219EEF49A0080F108 /* CoreGraphics.framework */; };
 		10A5A4E719EEF7D10080F108 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4E619EEF7D10080F108 /* libstdc++.6.0.9.dylib */; };
-		10A5A4EC19EEFED10080F108 /* ARState.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4EB19EEFED10080F108 /* ARState.m */; };
+		10A5A4EC19EEFED10080F108 /* ARState.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4EB19EEFED10080F108 /* ARState.mm */; };
 		10A5A4F319EF2CBB0080F108 /* ARDataSetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */; };
-		10A5A4F619EF42D90080F108 /* ARServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F519EF42D90080F108 /* ARServer.m */; };
+		10A5A4F619EF42D90080F108 /* ARServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F519EF42D90080F108 /* ARServer.mm */; };
 		10A5A4F919EF44C10080F108 /* ARContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F819EF44C10080F108 /* ARContext.m */; };
 /* End PBXBuildFile section */
 
@@ -70,12 +70,12 @@
 		10A5A4E219EEF49A0080F108 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		10A5A4E619EEF7D10080F108 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "vendor/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
 		10A5A4EA19EEFED10080F108 /* ARState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARState.h; path = "scenekit-test0/ARState.h"; sourceTree = "<group>"; };
-		10A5A4EB19EEFED10080F108 /* ARState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARState.m; path = "scenekit-test0/ARState.m"; sourceTree = "<group>"; };
+		10A5A4EB19EEFED10080F108 /* ARState.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARState.mm; path = "scenekit-test0/ARState.mm"; sourceTree = "<group>"; };
 		10A5A4ED19EF1F2E0080F108 /* ARMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ARMatrix.h; path = "scenekit-test0/ARMatrix.h"; sourceTree = "<group>"; };
 		10A5A4F119EF2CBB0080F108 /* ARDataSetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDataSetManager.h; path = "scenekit-test0/ARDataSetManager.h"; sourceTree = "<group>"; };
 		10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARDataSetManager.mm; path = "scenekit-test0/ARDataSetManager.mm"; sourceTree = "<group>"; };
 		10A5A4F419EF42D90080F108 /* ARServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARServer.h; path = "scenekit-test0/ARServer.h"; sourceTree = "<group>"; };
-		10A5A4F519EF42D90080F108 /* ARServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARServer.m; path = "scenekit-test0/ARServer.m"; sourceTree = "<group>"; };
+		10A5A4F519EF42D90080F108 /* ARServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARServer.mm; path = "scenekit-test0/ARServer.mm"; sourceTree = "<group>"; };
 		10A5A4F719EF44C10080F108 /* ARContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARContext.h; path = "scenekit-test0/ARContext.h"; sourceTree = "<group>"; };
 		10A5A4F819EF44C10080F108 /* ARContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARContext.m; path = "scenekit-test0/ARContext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,9 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				10A5A4F419EF42D90080F108 /* ARServer.h */,
-				10A5A4F519EF42D90080F108 /* ARServer.m */,
+				10A5A4F519EF42D90080F108 /* ARServer.mm */,
 				10A5A4EA19EEFED10080F108 /* ARState.h */,
-				10A5A4EB19EEFED10080F108 /* ARState.m */,
+				10A5A4EB19EEFED10080F108 /* ARState.mm */,
 				10A5A4ED19EF1F2E0080F108 /* ARMatrix.h */,
 				10A5A4F119EF2CBB0080F108 /* ARDataSetManager.h */,
 				10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */,
@@ -316,12 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A5A4EC19EEFED10080F108 /* ARState.m in Sources */,
+				10A5A4EC19EEFED10080F108 /* ARState.mm in Sources */,
 				10A5A4F319EF2CBB0080F108 /* ARDataSetManager.mm in Sources */,
 				10A5A4F919EF44C10080F108 /* ARContext.m in Sources */,
 				1094F49319EC46A300E57251 /* GameViewController.swift in Sources */,
 				1094F48F19EC46A200E57251 /* AppDelegate.swift in Sources */,
-				10A5A4F619EF42D90080F108 /* ARServer.m in Sources */,
+				10A5A4F619EF42D90080F108 /* ARServer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
