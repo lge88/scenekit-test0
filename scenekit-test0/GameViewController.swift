@@ -18,6 +18,10 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ar = ARServer(done: {
+            (ctx) in
+            ctx.sayHello()
+        })
         initViews()
         animateScene()
         initControls()

@@ -14,6 +14,23 @@
 		1094F49819EC46A300E57251 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1094F49719EC46A300E57251 /* Images.xcassets */; };
 		1094F49B19EC46A300E57251 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1094F49919EC46A300E57251 /* LaunchScreen.xib */; };
 		1094F4A719EC46A300E57251 /* scenekit_test0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1094F4A619EC46A300E57251 /* scenekit_test0Tests.swift */; };
+		10A5A4C419EEDA560080F108 /* libVuforia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4C319EEDA560080F108 /* libVuforia.a */; };
+		10A5A4CD19EEF1E70080F108 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4CC19EEF1E70080F108 /* CoreMotion.framework */; };
+		10A5A4D119EEF3F30080F108 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4D019EEF3F30080F108 /* CoreMedia.framework */; };
+		10A5A4D319EEF4070080F108 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4D219EEF4070080F108 /* AVFoundation.framework */; };
+		10A5A4D519EEF4130080F108 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4D419EEF4130080F108 /* SystemConfiguration.framework */; };
+		10A5A4D719EEF4270080F108 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4D619EEF4270080F108 /* OpenGLES.framework */; };
+		10A5A4D919EEF4410080F108 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4D819EEF4410080F108 /* CoreVideo.framework */; };
+		10A5A4DB19EEF4600080F108 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4DA19EEF4600080F108 /* Security.framework */; };
+		10A5A4DD19EEF46F0080F108 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4DC19EEF46F0080F108 /* QuartzCore.framework */; };
+		10A5A4DF19EEF47C0080F108 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4DE19EEF47C0080F108 /* UIKit.framework */; };
+		10A5A4E119EEF48B0080F108 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4E019EEF48B0080F108 /* Foundation.framework */; };
+		10A5A4E319EEF49A0080F108 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4E219EEF49A0080F108 /* CoreGraphics.framework */; };
+		10A5A4E719EEF7D10080F108 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A5A4E619EEF7D10080F108 /* libstdc++.6.0.9.dylib */; };
+		10A5A4EC19EEFED10080F108 /* ARState.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4EB19EEFED10080F108 /* ARState.m */; };
+		10A5A4F319EF2CBB0080F108 /* ARDataSetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */; };
+		10A5A4F619EF42D90080F108 /* ARServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F519EF42D90080F108 /* ARServer.m */; };
+		10A5A4F919EF44C10080F108 /* ARContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F819EF44C10080F108 /* ARContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +55,29 @@
 		1094F4A019EC46A300E57251 /* scenekit-test0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "scenekit-test0Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1094F4A519EC46A300E57251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1094F4A619EC46A300E57251 /* scenekit_test0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scenekit_test0Tests.swift; sourceTree = "<group>"; };
+		10A5A4C319EEDA560080F108 /* libVuforia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVuforia.a; path = "vendor/vuforia-sdk-ios-3-0-9/build/lib/arm/libVuforia.a"; sourceTree = "<group>"; };
+		10A5A4C519EEDB110080F108 /* scenekit-test0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "scenekit-test0-Bridging-Header.h"; sourceTree = "<group>"; };
+		10A5A4CC19EEF1E70080F108 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		10A5A4D019EEF3F30080F108 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		10A5A4D219EEF4070080F108 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		10A5A4D419EEF4130080F108 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		10A5A4D619EEF4270080F108 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		10A5A4D819EEF4410080F108 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		10A5A4DA19EEF4600080F108 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		10A5A4DC19EEF46F0080F108 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		10A5A4DE19EEF47C0080F108 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		10A5A4E019EEF48B0080F108 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		10A5A4E219EEF49A0080F108 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		10A5A4E619EEF7D10080F108 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "vendor/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
+		10A5A4EA19EEFED10080F108 /* ARState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARState.h; path = "scenekit-test0/ARState.h"; sourceTree = "<group>"; };
+		10A5A4EB19EEFED10080F108 /* ARState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARState.m; path = "scenekit-test0/ARState.m"; sourceTree = "<group>"; };
+		10A5A4ED19EF1F2E0080F108 /* ARMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ARMatrix.h; path = "scenekit-test0/ARMatrix.h"; sourceTree = "<group>"; };
+		10A5A4F119EF2CBB0080F108 /* ARDataSetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARDataSetManager.h; path = "scenekit-test0/ARDataSetManager.h"; sourceTree = "<group>"; };
+		10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARDataSetManager.mm; path = "scenekit-test0/ARDataSetManager.mm"; sourceTree = "<group>"; };
+		10A5A4F419EF42D90080F108 /* ARServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARServer.h; path = "scenekit-test0/ARServer.h"; sourceTree = "<group>"; };
+		10A5A4F519EF42D90080F108 /* ARServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARServer.m; path = "scenekit-test0/ARServer.m"; sourceTree = "<group>"; };
+		10A5A4F719EF44C10080F108 /* ARContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARContext.h; path = "scenekit-test0/ARContext.h"; sourceTree = "<group>"; };
+		10A5A4F819EF44C10080F108 /* ARContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARContext.m; path = "scenekit-test0/ARContext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +85,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5A4E719EEF7D10080F108 /* libstdc++.6.0.9.dylib in Frameworks */,
+				10A5A4D919EEF4410080F108 /* CoreVideo.framework in Frameworks */,
+				10A5A4D119EEF3F30080F108 /* CoreMedia.framework in Frameworks */,
+				10A5A4D319EEF4070080F108 /* AVFoundation.framework in Frameworks */,
+				10A5A4D519EEF4130080F108 /* SystemConfiguration.framework in Frameworks */,
+				10A5A4D719EEF4270080F108 /* OpenGLES.framework in Frameworks */,
+				10A5A4CD19EEF1E70080F108 /* CoreMotion.framework in Frameworks */,
+				10A5A4DB19EEF4600080F108 /* Security.framework in Frameworks */,
+				10A5A4DD19EEF46F0080F108 /* QuartzCore.framework in Frameworks */,
+				10A5A4DF19EEF47C0080F108 /* UIKit.framework in Frameworks */,
+				10A5A4E119EEF48B0080F108 /* Foundation.framework in Frameworks */,
+				10A5A4E319EEF49A0080F108 /* CoreGraphics.framework in Frameworks */,
+				10A5A4C419EEDA560080F108 /* libVuforia.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +114,9 @@
 		1094F48019EC46A200E57251 = {
 			isa = PBXGroup;
 			children = (
+				10A5A4FA19EF47C80080F108 /* arkit */,
+				10A5A4E919EEF86B0080F108 /* vendor */,
+				10A5A4E819EEF8570080F108 /* frameworks */,
 				1094F48B19EC46A200E57251 /* scenekit-test0 */,
 				1094F4A319EC46A300E57251 /* scenekit-test0Tests */,
 				1094F48A19EC46A200E57251 /* Products */,
@@ -86,6 +142,7 @@
 				1094F49719EC46A300E57251 /* Images.xcassets */,
 				1094F49919EC46A300E57251 /* LaunchScreen.xib */,
 				1094F48C19EC46A200E57251 /* Supporting Files */,
+				10A5A4C519EEDB110080F108 /* scenekit-test0-Bridging-Header.h */,
 			);
 			path = "scenekit-test0";
 			sourceTree = "<group>";
@@ -113,6 +170,49 @@
 				1094F4A519EC46A300E57251 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10A5A4E819EEF8570080F108 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10A5A4E219EEF49A0080F108 /* CoreGraphics.framework */,
+				10A5A4E019EEF48B0080F108 /* Foundation.framework */,
+				10A5A4DE19EEF47C0080F108 /* UIKit.framework */,
+				10A5A4DC19EEF46F0080F108 /* QuartzCore.framework */,
+				10A5A4DA19EEF4600080F108 /* Security.framework */,
+				10A5A4D819EEF4410080F108 /* CoreVideo.framework */,
+				10A5A4D619EEF4270080F108 /* OpenGLES.framework */,
+				10A5A4D419EEF4130080F108 /* SystemConfiguration.framework */,
+				10A5A4D219EEF4070080F108 /* AVFoundation.framework */,
+				10A5A4D019EEF3F30080F108 /* CoreMedia.framework */,
+				10A5A4CC19EEF1E70080F108 /* CoreMotion.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		10A5A4E919EEF86B0080F108 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				10A5A4E619EEF7D10080F108 /* libstdc++.6.0.9.dylib */,
+				10A5A4C319EEDA560080F108 /* libVuforia.a */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		10A5A4FA19EF47C80080F108 /* arkit */ = {
+			isa = PBXGroup;
+			children = (
+				10A5A4F419EF42D90080F108 /* ARServer.h */,
+				10A5A4F519EF42D90080F108 /* ARServer.m */,
+				10A5A4EA19EEFED10080F108 /* ARState.h */,
+				10A5A4EB19EEFED10080F108 /* ARState.m */,
+				10A5A4ED19EF1F2E0080F108 /* ARMatrix.h */,
+				10A5A4F119EF2CBB0080F108 /* ARDataSetManager.h */,
+				10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */,
+				10A5A4F719EF44C10080F108 /* ARContext.h */,
+				10A5A4F819EF44C10080F108 /* ARContext.m */,
+			);
+			name = arkit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5A4EC19EEFED10080F108 /* ARState.m in Sources */,
+				10A5A4F319EF2CBB0080F108 /* ARDataSetManager.mm in Sources */,
+				10A5A4F919EF44C10080F108 /* ARContext.m in Sources */,
 				1094F49319EC46A300E57251 /* GameViewController.swift in Sources */,
 				1094F48F19EC46A200E57251 /* AppDelegate.swift in Sources */,
+				10A5A4F619EF42D90080F108 /* ARServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +397,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/vendor/vuforia-sdk-ios-3-0-9/build/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -330,8 +440,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/vendor/vuforia-sdk-ios-3-0-9/build/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -342,9 +458,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "scenekit-test0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor/vuforia-sdk-ios-3-0-9/build/lib/arm",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib",
+					"$(PROJECT_DIR)/vendor",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "scenekit-test0/scenekit-test0-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +477,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "scenekit-test0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor/vuforia-sdk-ios-3-0-9/build/lib/arm",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib",
+					"$(PROJECT_DIR)/vendor",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "scenekit-test0/scenekit-test0-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +544,7 @@
 				1094F4AC19EC46A300E57251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1094F4AD19EC46A300E57251 /* Build configuration list for PBXNativeTarget "scenekit-test0Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +553,7 @@
 				1094F4AF19EC46A300E57251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

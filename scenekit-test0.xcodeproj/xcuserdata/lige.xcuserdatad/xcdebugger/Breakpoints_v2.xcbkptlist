@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "434939904.723181"
+            timestampString = "435112467.027524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "createScene()"
             landmarkType = "5">
          </BreakpointContent>

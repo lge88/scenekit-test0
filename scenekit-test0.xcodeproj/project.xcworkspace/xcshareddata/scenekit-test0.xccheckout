@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A64A1B35-6963-4012-A56F-158493FD446F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>scenekit-test0</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BCA709CE1B75C3DED33A264B0D83EE19865FE37F</key>
+		<string>github.com:lge88/scenekit-test0.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>scenekit-test0.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BCA709CE1B75C3DED33A264B0D83EE19865FE37F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:lge88/scenekit-test0.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BCA709CE1B75C3DED33A264B0D83EE19865FE37F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BCA709CE1B75C3DED33A264B0D83EE19865FE37F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>scenekit-test0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
