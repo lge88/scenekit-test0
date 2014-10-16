@@ -22,6 +22,12 @@ class GameViewController: UIViewController {
         let ok = ctx.startAR()
         let mat = ctx.getProjectionMatrix()
         
+        // TODO:
+        // - Add dataset to resource
+        // - Load dataset
+        // - Start an animation loop than pull the tracked targets
+        //   Every 2 seconds.
+        
         println(mat.data)
         
         initViews()
