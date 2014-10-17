@@ -21,5 +21,6 @@
 
 // A list of ARTarget objects
 - (NSArray*) getTrackedTargets;
+- (void) drawVideoBackground;
 
 @end

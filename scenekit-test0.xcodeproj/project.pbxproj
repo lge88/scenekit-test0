@@ -31,6 +31,10 @@
 		10A5A4F319EF2CBB0080F108 /* ARDataSetManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F219EF2CBB0080F108 /* ARDataSetManager.mm */; };
 		10A5A4F619EF42D90080F108 /* ARServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F519EF42D90080F108 /* ARServer.mm */; };
 		10A5A4F919EF44C10080F108 /* ARContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5A4F819EF44C10080F108 /* ARContext.m */; };
+		10A5A50219F064D90080F108 /* StonesAndChips.dat in Resources */ = {isa = PBXBuildFile; fileRef = 10A5A4FE19F064D90080F108 /* StonesAndChips.dat */; };
+		10A5A50319F064DA0080F108 /* StonesAndChips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 10A5A4FF19F064D90080F108 /* StonesAndChips.xml */; };
+		10A5A50419F064DA0080F108 /* Tarmac.dat in Resources */ = {isa = PBXBuildFile; fileRef = 10A5A50019F064D90080F108 /* Tarmac.dat */; };
+		10A5A50519F064DA0080F108 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 10A5A50119F064D90080F108 /* Tarmac.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		10A5A4F519EF42D90080F108 /* ARServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARServer.mm; path = "scenekit-test0/ARServer.mm"; sourceTree = "<group>"; };
 		10A5A4F719EF44C10080F108 /* ARContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARContext.h; path = "scenekit-test0/ARContext.h"; sourceTree = "<group>"; };
 		10A5A4F819EF44C10080F108 /* ARContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARContext.m; path = "scenekit-test0/ARContext.m"; sourceTree = "<group>"; };
+		10A5A4FE19F064D90080F108 /* StonesAndChips.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = StonesAndChips.dat; sourceTree = "<group>"; };
+		10A5A4FF19F064D90080F108 /* StonesAndChips.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StonesAndChips.xml; sourceTree = "<group>"; };
+		10A5A50019F064D90080F108 /* Tarmac.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tarmac.dat; sourceTree = "<group>"; };
+		10A5A50119F064D90080F108 /* Tarmac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tarmac.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				10A5A4FA19EF47C80080F108 /* arkit */,
-				10A5A4E919EEF86B0080F108 /* vendor */,
 				10A5A4E819EEF8570080F108 /* frameworks */,
 				1094F48B19EC46A200E57251 /* scenekit-test0 */,
 				1094F4A319EC46A300E57251 /* scenekit-test0Tests */,
@@ -202,6 +209,8 @@
 		10A5A4FA19EF47C80080F108 /* arkit */ = {
 			isa = PBXGroup;
 			children = (
+				10A5A4FD19F064AF0080F108 /* assets */,
+				10A5A4E919EEF86B0080F108 /* vendor */,
 				10A5A4F419EF42D90080F108 /* ARServer.h */,
 				10A5A4F519EF42D90080F108 /* ARServer.mm */,
 				10A5A4EA19EEFED10080F108 /* ARState.h */,
@@ -213,6 +222,17 @@
 				10A5A4F819EF44C10080F108 /* ARContext.m */,
 			);
 			name = arkit;
+			sourceTree = "<group>";
+		};
+		10A5A4FD19F064AF0080F108 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				10A5A4FE19F064D90080F108 /* StonesAndChips.dat */,
+				10A5A4FF19F064D90080F108 /* StonesAndChips.xml */,
+				10A5A50019F064D90080F108 /* Tarmac.dat */,
+				10A5A50119F064D90080F108 /* Tarmac.xml */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +315,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A5A50219F064D90080F108 /* StonesAndChips.dat in Resources */,
+				10A5A50519F064DA0080F108 /* Tarmac.xml in Resources */,
+				10A5A50319F064DA0080F108 /* StonesAndChips.xml in Resources */,
 				1094F49B19EC46A300E57251 /* LaunchScreen.xib in Resources */,
 				1094F49819EC46A300E57251 /* Images.xcassets in Resources */,
 				1094F49119EC46A300E57251 /* art.scnassets in Resources */,
 				1094F49619EC46A300E57251 /* Main.storyboard in Resources */,
+				10A5A50419F064DA0080F108 /* Tarmac.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

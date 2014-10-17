@@ -9,6 +9,7 @@
 #import "ARDataSetManager.h"
 #import <QCAR/DataSet.h>
 #import <QCAR/TrackerManager.h>
+#import <QCAR/Trackable.h>
 #import <QCAR/ImageTracker.h>
 
 
@@ -57,6 +58,7 @@ QCAR::ImageTracker* getImageTracker() {
         return NO;
     }
     
+    [dataSetByName setObject:[NSValue valueWithPointer:dataSet] forKey:name];
     NSLog(@"INFO: successfully created dataset (%@)", name);
     return YES;
 }
@@ -77,7 +79,6 @@ QCAR::ImageTracker* getImageTracker() {
         return NO;
     }
     
-    [dataSetByName setObject:[NSValue valueWithPointer:dataSet] forKey:name];
     return YES;
 }
 
@@ -118,8 +119,10 @@ QCAR::ImageTracker* getImageTracker() {
         return NO;
     }
     
-    // [self setExtendedTrackingForDataSet:dataSet start:YES];
+    [self setExtendedTrackingForDataSet:dataSet start:YES];
     NSLog(@"Successfully activated data set.");
+    
+    NSLog(@"activate dataset: %@", [self getActiveDataSet]);
     return YES;
 }
 
@@ -127,7 +130,7 @@ QCAR::ImageTracker* getImageTracker() {
     QCAR::DataSet* dataSet = [self getDataSetByName:name];
     if (NULL == dataSet) return NO;
     
-    // [self setExtendedTrackingForDataSet:theDataSet start:NO];
+    [self setExtendedTrackingForDataSet:dataSet start:NO];
     
     QCAR::ImageTracker* imageTracker = getImageTracker();
     
@@ -139,6 +142,27 @@ QCAR::ImageTracker* getImageTracker() {
     }
     
     return YES;
+}
+
+- (BOOL) setExtendedTrackingForDataSet:(QCAR::DataSet *)theDataSet start:(BOOL) start {
+    BOOL result = YES;
+    for (int tIdx = 0; tIdx < theDataSet->getNumTrackables(); tIdx++) {
+        QCAR::Trackable* trackable = theDataSet->getTrackable(tIdx);
+        if (start) {
+            if (!trackable->startExtendedTracking())
+            {
+                NSLog(@"Failed to start extended tracking on: %s", trackable->getName());
+                result = false;
+            }
+        } else {
+            if (!trackable->stopExtendedTracking())
+            {
+                NSLog(@"Failed to stop extended tracking on: %s", trackable->getName());
+                result = false;
+            }
+        }
+    }
+    return result;
 }
 
 - (NSArray*) getDateSetNameList {

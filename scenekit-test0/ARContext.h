@@ -21,5 +21,7 @@
 
 - (BOOL) startAR;
 - (ARMatrix44F) getProjectionMatrix;
+//- (void) drawVideoBackground;
+- (BOOL) isRetina;
 
 @end

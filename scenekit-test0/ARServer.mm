@@ -169,6 +169,13 @@ namespace {
         return [self NSErrorWithCode:-1];
     }
     
+    QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
+    QCAR::Tracker* tracker = trackerManager.getTracker(QCAR::ImageTracker::getClassType());
+    if(tracker == 0) {
+        return [self NSErrorWithCode:-1];
+    }    
+    tracker->start();
+    
     // configure QCAR video background
     [self configureVideoBackgroundWithViewWidth:viewWidth andHeight:viewHeight];
     
@@ -180,7 +187,9 @@ namespace {
 
 - (NSError*) startAR {
     float w = mViewSize.width, h = mViewSize.height;
-    return [self startAROnBackCameraWithViewWidth:w andHeight:h];
+    NSError* err = [self startAROnBackCameraWithViewWidth:w andHeight:h];
+    QCAR::CameraDevice::getInstance().setFocusMode(QCAR::CameraDevice::FOCUS_MODE_CONTINUOUSAUTO);
+    return err;
 }
 
 - (ARMatrix44F) getProjectionMatrix {

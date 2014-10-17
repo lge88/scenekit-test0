@@ -49,4 +49,13 @@
     return [mARServer getProjectionMatrix];
 }
 
+- (void) drawVideoBackground {
+    [mARState drawVideoBackground];
+}
+
+- (BOOL) isRetina {
+    return [mARServer isRetinaDisplay];
+}
+
+
 @end

@@ -11,7 +11,7 @@
 #import <QCAR/Renderer.h>
 #import <QCAR/Tool.h>
 #import <QCAR/TrackableResult.h>
-
+#import <OpenGLES/ES2/gl.h>
 
 namespace {
     void makeIdentity(ARMatrix44F* mat) {
@@ -86,6 +86,13 @@ namespace {
     QCAR::Renderer::getInstance().end();
     
     return targets;
+}
+
+- (void) drawVideoBackground {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    QCAR::State state = QCAR::Renderer::getInstance().begin();
+    QCAR::Renderer::getInstance().drawVideoBackground();
+    QCAR::Renderer::getInstance().end();
 }
 
 @end
