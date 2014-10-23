@@ -1,0 +1,61 @@
+qcarinitflag 2
+boundsSize 1536 2048
+orietation 1
+
+
+mat->data[0] = 1; mat->data[8] = 0;mat->data[1] = 0; mat->data[9] = 0;
+mat->data[2] = 0; mat->data[10] = 1;mat->data[3] = 0; mat->data[11] = 0;
+mat->data[4] = 0; mat->data[12] = 0;mat->data[5] = 1; mat->data[13] = 0;
+mat->data[6] = 0; mat->data[14] = 0;mat->data[7] = 0; mat->data[15] = 1;
+
+
+mat->data[0] = 1; mat->data[4] = 0; mat->data[8] = 0; mat->data[12] = 0;
+mat->data[1] = 0; mat->data[5] = 1; mat->data[9] = 0; mat->data[13] = 0;
+mat->data[2] = 0; mat->data[6] = 0; mat->data[10] = 1; mat->data[14] = 0;
+mat->data[3] = 0; mat->data[7] = 0; mat->data[11] = 0; mat->data[15] = 1;
+
+
+VideoBackgroundConfig: size: 1536,2730
+VideoMode:w=1280 h=720
+width=1536.000 height=2048.000
+ViewPort: X,Y: 0,-341 Size X,Y:1536,2730
+
+VideoBackgroundConfig: size: 768,1365
+VideoMode:w=1280 h=720
+width=768.000 height=1024.000
+ViewPort: X,Y: 0,-170 Size X,Y:768,1365
+
+(0.0, -1.96720004081726, 0.0, 0.0, -3.49724459648132, 0.0, 0.0, 0.0, 0.0, -0.00156250002328306, 1.00080037117004, 1.0, 0.0, 0.0, -4.00160074234009, 0.0)
+
+
+// The one works:
+
+1: QCAR::registerCallback(&qcarUpdate);
+1: QCAR::CameraDevice::getInstance().setFocusMode(QCAR::CameraDevice::FOCUS_MODE_TRIGGERAUTO);
+
+21: QCAR::setInitParameters(mQCARInitFlags);
+21: QCAR::init()
+
+1: QCAR::onSurfaceCreated();
+1: QCAR::onSurfaceChanged(self.mARViewBoundsSize.width, self.mARViewBoundsSize.height);
+1: QCAR::setRotation(QCAR::ROTATE_IOS_90);
+
+1: QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
+1: QCAR::Tracker* trackerBase = trackerManager.initTracker(QCAR::ImageTracker::getClassType());
+
+40: imageTracker->createDataSet()
+40: dataSet->load()
+40: imageTracker->activateDataSet(dataSet)
+40: theDataSet->getNumTrackables()
+40: trackable->startExtendedTracking()
+
+40: QCAR::CameraDevice::getInstance().init(camera)
+40: QCAR::CameraDevice::getInstance().start()
+
+69: imageTracker->activateDataSet(dataSet)
+
+40: tracker->start()
+40: configureVideoBackgroundWithViewWidth:(float)viewWidth andHeight:(float)viewHeight
+40: QCAR::Renderer::getInstance().setVideoBackgroundConfig(config);
+40: QCAR::CameraDevice::getInstance().getCameraCalibration();
+40: QCAR::CameraDevice::getInstance().setFocusMode(QCAR::CameraDevice::FOCUS_MODE_CONTINUOUSAUTO);

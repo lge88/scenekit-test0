@@ -11,44 +11,16 @@ import QuartzCore
 import SceneKit
 import AVFoundation
 
-class AREAGLView: UIView, UIGLViewProtocol {
-    var arContext:ARContext? = nil
-    
-    override class func layerClass() -> AnyClass {
-        return CAEAGLLayer.self
-    }
-    
-    func setARContext(ctx:ARContext) {
-        arContext = ctx
-    }
-    
-    func renderFrameQCAR() {
-        if (arContext != nil) {
-            let state = arContext!.getARState()
-            let targets = state.getTrackedTargets() as [ARTarget]
-            println("num of targets: ", targets.count)
-            for target in targets {
-                println("target: ", target.getName())
-                println("mvMatrix: ", target.getModelViewMatrix().data)
-            }
-        }
-    }
-}
-
 class GameViewController: UIViewController {
     // interesting: tag = 0 won't work..
     let SCNVIEW_TAG = 1000
     let VIDEOVIEW_TAG = 2000
-    let AREAGLVIEW_TAG = 3000
     
     var arContext:ARContext? = nil
     
     func initARCallback(ctx: ARContext!) {
         
         arContext = ctx
-
-        let mat = ctx.getProjectionMatrix()
-        println(mat.data)
         
         // TODO:
         // - Add dataset to resource
@@ -73,14 +45,15 @@ class GameViewController: UIViewController {
         
         println("is retina: ", ctx.isRetina() ? "true" : "false")
         
-        NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
-        
         ok = ctx.startAR()
         println("start ar ok: ", ok ? "true" : "false")
-    
-        initViews()
-        animateScene()
-        initControls()
+        
+        let mat = ctx.getProjectionMatrix()
+        println(mat.data)
+        
+        dispatch_async(dispatch_get_main_queue(), {()
+            NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        })
     }
     
     func update() {
@@ -105,8 +78,11 @@ class GameViewController: UIViewController {
         viewFrame.size.width = viewFrame.size.width*2
         viewFrame.size.height = viewFrame.size.height*2
         println(viewFrame);
-        
+
         ARServer(size:viewFrame.size, done: initARCallback)
+        initViews()
+        animateScene()
+        initControls()
     }
     
     func initViews() {
@@ -158,14 +134,6 @@ class GameViewController: UIViewController {
         return videoView
     }
     
-    func createAREAGLView() -> AREAGLView {
-        let rootView = self.view
-        let arEAGLView = AREAGLView()
-        arEAGLView.frame = rootView.bounds
-        arEAGLView.tag = AREAGLVIEW_TAG
-        return arEAGLView
-    }
-    
     func createScene() -> SCNScene {
         // create a new scene
         let scene = SCNScene()
@@ -205,10 +173,6 @@ class GameViewController: UIViewController {
     
     func getVideoView() -> UIView {
         return self.view.viewWithTag(VIDEOVIEW_TAG)!
-    }
-    
-    func getAREAGLView() -> AREAGLView {
-        return self.view.viewWithTag(AREAGLVIEW_TAG) as AREAGLView
     }
     
     func getScene() -> SCNScene {
@@ -280,9 +244,9 @@ class GameViewController: UIViewController {
     
     override func supportedInterfaceOrientations() -> Int {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
+            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
         } else {
-            return Int(UIInterfaceOrientationMask.Portrait.toRaw())
+            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
         }
     }
     

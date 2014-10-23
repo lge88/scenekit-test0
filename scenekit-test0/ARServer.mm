@@ -90,7 +90,12 @@ namespace {
         QCAR::setRotation(QCAR::ROTATE_IOS_90);
     }
     
-    [self initTrackerWithDone:done Fail:fail];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //[self initQCARInBackgroundWithSize:size Done:done Fail: fail];
+        [self initTrackerWithDone:done Fail:fail];
+    });
+    
+    //[self initTrackerWithDone:done Fail:fail];
 }
 
 - (void) initTrackerWithDone:(void (^)(ARContext*)) done Fail:(void (^)()) fail {
