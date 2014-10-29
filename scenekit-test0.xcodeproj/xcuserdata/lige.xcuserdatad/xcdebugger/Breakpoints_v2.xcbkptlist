@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777479.842571"
+            timestampString = "436317250.147944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "initViews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,59 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435275114.576683"
+            timestampString = "436317128.487624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "initARCallback(_:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777479.842571"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "scenekit_test0.GameViewController.viewDidLoad (scenekit_test0.GameViewController)() -&gt; ()"
-                  moduleName = "scenekit-test0"
-                  urlString = "file:///Users/lige/Develop/ios/scenekit-test0/scenekit-test0/GameViewController.swift"
-                  timestampString = "435225667.644873"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "608">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "reabstraction thunk helper from @callee_owned (@owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.ARContext&gt;) -&gt; (@unowned ()) to @callee_owned (@in Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.ARContext&gt;) -&gt; (@out ())"
-                  moduleName = "scenekit-test0"
-                  urlString = "file:///Users/lige/Develop/ios/scenekit-test0/scenekit-test0/GameViewController.swift"
-                  timestampString = "435225667.645149"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -152,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777479.842571"
+            timestampString = "436317128.487624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777479.842571"
+            timestampString = "436317250.147944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "initViews()"
             landmarkType = "5">
          </BreakpointContent>
@@ -184,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777479.842571"
+            timestampString = "436317128.487624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "initARCallback(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777479.842571"
+            timestampString = "436317128.487624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -216,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scenekit-test0/GameViewController.swift"
-            timestampString = "435777497.973077"
+            timestampString = "436317128.487624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "initARCallback(_:)"
             landmarkType = "5">
          </BreakpointContent>

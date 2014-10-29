@@ -22,25 +22,13 @@ class GameViewController: UIViewController {
         
         arContext = ctx
         
-        // TODO:
-        // - Add dataset to resource
-        // - Load dataset
-        // - Start an animation loop than pull the tracked targets
-        //   Every 2 seconds.
-        // - Debug:
-        //   - from the working sample vuforia code.
-        //   - write down every QCAR call
-        //   - from this application.
-        //   - write down every QCAR call
-        //   - compare
-        
-        let dsm = ctx.getDataSetManager()
+        let dataSetManager = ctx.getDataSetManager()
         var ok:Bool
         
-        ok = dsm.createDataSetByName("stones", dataFile: "StonesAndChips.xml")
+        ok = dataSetManager.createDataSetByName("stones", dataFile: "StonesAndChips.xml")
         println("create data set ok: ", ok ? "true" : "false")
         
-        ok = dsm.activateDataSetByName("stones")
+        ok = dataSetManager.activateDataSetByName("stones")
         println("activate data set ok: ", ok ? "true" : "false")
         
         println("is retina: ", ctx.isRetina() ? "true" : "false")
@@ -49,9 +37,10 @@ class GameViewController: UIViewController {
         println("start ar ok: ", ok ? "true" : "false")
         
         let mat = ctx.getProjectionMatrix()
-        println(mat.data)
+        println("projection matrix: ", mat.data)
         
         dispatch_async(dispatch_get_main_queue(), {()
+            // Start a loop than pull the tracked targets every 0.4 seconds.
             NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         })
     }
@@ -68,31 +57,29 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //initViews()
+
         let screenBounds = UIScreen.mainScreen().bounds;
-        println(screenBounds);
+        println("screen bounds", screenBounds);
         
         var viewFrame = self.view.frame;
-        println(viewFrame);
-        
-        viewFrame.size.width = viewFrame.size.width*2
-        viewFrame.size.height = viewFrame.size.height*2
+        println("view frame:")
         println(viewFrame);
 
-        ARServer(size:viewFrame.size, done: initARCallback)
         initViews()
         animateScene()
         initControls()
+        ARServer(size:viewFrame.size, done: initARCallback)
     }
     
     func initViews() {
         let rootView = self.view
+        
         let scnView = createSceneView()
         let scene = createScene()
         scnView.scene = scene
+        
         let videoView = createVideoView()
-        //let arEAGLView = createAREAGLView()
-        //rootView.addSubview(arEAGLView)
+        
         rootView.addSubview(videoView)
         rootView.addSubview(scnView)
     }
@@ -103,9 +90,7 @@ class GameViewController: UIViewController {
         scnView.frame = rootView.bounds
         scnView.tag = SCNVIEW_TAG
         scnView.backgroundColor = UIColor.clearColor()
-        // allows the user to manipulate the camera
         scnView.allowsCameraControl = true
-        // show statistics such as fps and timing information
         scnView.showsStatistics = true
         return scnView
     }
